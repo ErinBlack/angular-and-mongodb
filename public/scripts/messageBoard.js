@@ -23,6 +23,9 @@ myApp.controller('MessageBoard', function(MessageService){
     console.log('messageToAdd', messageToAdd);
     MessageService.sendMessage(messageToAdd);
     vm.getMessages();
+
+    vm.name = '';
+    vm.message = '';
   }; //end submitMessage
 
 }); //end controller
