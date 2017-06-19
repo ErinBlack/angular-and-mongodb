@@ -8,7 +8,7 @@ myApp.service('MessageService', function($http){
     console.log('newMessage data', newMessage);
     return $http({
       method: 'POST',
-      url: '/messages',
+      url: '/message',
       data: newMessage
     });
   }; //end submitMessage
