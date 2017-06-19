@@ -12,14 +12,15 @@
     <header class="jumbotron">
       <h1>Week 6 Checkpoint</h1>
     </header>
-    <div class="container" ng-controller="MessageBoard as mb">
+    <div class="container" ng-controller="MessageBoard as mb"> <!--start controller -->
       <form class="form-horizontal">
         <h3>Name:</h3>
-      <input type="number" class="form-control" placeholder="Joe Schmoe" ng-required="{ string }" ng-model="re.name">
-      <h3>Message:</h3>
-      <input type="text" class="form-control" placeholder="I have something to say!" ng-required="{ string }"  ng-model="re.message">
-      <button type="submit" class="btn btn-primary submitButton"  ng-disabled="userForm.$invalid" ng-click="re.submitMessage()">Submit Message</button>
+        <input type="text" class="form-control" placeholder="Joe Schmoe" ng-model="mb.name">
+        <h3>Message:</h3>
+        <input type="text" class="form-control" placeholder="I have something to say!" ng-model="mb.message">
+        <button type="submit" class="btn btn-primary submitButton" ng-click="mb.submitMessage()">Submit Message</button>
       </form>
-    </div>
+    </div>    <!-- end controller -->
+
   </body>
 </html>
