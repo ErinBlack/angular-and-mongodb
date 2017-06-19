@@ -13,7 +13,7 @@
     <header class="jumbotron">
       <h1>Week 6 Checkpoint</h1>
     </header>
-    <div class="container" ng-controller="MessageBoard as mb"> <!--start controller -->
+    <div class="container" ng-controller="MessageBoard as mb" ng-init="mb.getMessages()"> <!--start controller -->
       <form class="form-horizontal">
         <h3>Name:</h3>
         <input type="text" class="form-control" placeholder="Joe Schmoe" ng-model="mb.name">
@@ -21,6 +21,10 @@
         <input type="text" class="form-control" placeholder="I have something to say!" ng-model="mb.message">
         <button type="submit" class="btn btn-primary submitButton" ng-click="mb.submitMessage()">Submit Message</button>
       </form>
+
+      <div class="" ng-repeat="message in mb.theMessages">
+          <p>{{message.name}}: {{message.message}}  </p>
+        </div>
     </div>    <!-- end controller -->
 
   </body>

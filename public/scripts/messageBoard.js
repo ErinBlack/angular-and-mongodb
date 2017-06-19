@@ -4,14 +4,14 @@ myApp.controller('MessageBoard', function(MessageService){
   var vm = this;
   console.log('inside MessageBoard controller');
 
-//   vm.getMessages = function() {
-//   console.log('in getMessages');
-//   MessageService.getmessages().then(function() {
-//     console.log('back in controller:', MessageService.allMyPeeps);
-//     vm.thePeeps = PeepsService.allMyPeeps.data;
-//     console.log(vm.thePeeps);
-//   });
-// }; //end whereMyPeepsAt
+  vm.getMessages = function() {
+  console.log('in getMessages');
+  MessageService.getMessages().then(function() {
+    console.log('back in controller:', MessageService.allMessages);
+    vm.theMessages = MessageService.allMessages.data;
+    console.log(vm.theMessages);
+  });
+}; //end whereMyPeepsAt
 
 //submit message
   vm.submitMessage = function(){
@@ -22,6 +22,7 @@ myApp.controller('MessageBoard', function(MessageService){
     }; //end messageToAdd
     console.log('messageToAdd', messageToAdd);
     MessageService.sendMessage(messageToAdd);
+    vm.getMessages();
   }; //end submitMessage
 
 }); //end controller

@@ -14,4 +14,17 @@ myApp.service('MessageService', function($http){
   }; //end submitMessage
 
 
+  //getMessages
+
+  sv.getMessages = function() {
+  console.log('in getMessages');
+  return $http({
+    method: 'GET',
+    url: '/message',
+  }).then(function(response) {
+    sv.allMessages = response;
+  });
+};
+
+
 }); //end MessageService

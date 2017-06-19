@@ -23,7 +23,7 @@ router.get( '/', function( req, res ){
   messageModel.find().then( function( data ){
   res.send( data );
   });
-});
+}); //end router.get
 
 
 //post to messageboard
