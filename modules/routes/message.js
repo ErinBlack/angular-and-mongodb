@@ -39,6 +39,7 @@ router.post( '/', function( req, res ){
   // create new record
   var newMessage=messageModel( messageToAdd );
   newMessage.save();
+   res.send( 'good times' );
 }); //end post
 
 
