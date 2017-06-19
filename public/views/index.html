@@ -21,10 +21,12 @@
         <input type="text" class="form-control" placeholder="I have something to say!" ng-model="mb.message">
         <button type="submit" class="btn btn-primary submitButton" ng-click="mb.submitMessage()">Submit Message</button>
       </form>
-
-      <div class="" ng-repeat="message in mb.theMessages">
-          <p>{{message.name}}: {{message.message}}  </p>
+      <div class="messages">
+        <div class="message" ng-repeat="message in mb.theMessages">
+            <p>{{message.name}}: {{message.message}}  </p>
         </div>
+      </div>
+
     </div>    <!-- end controller -->
 
   </body>

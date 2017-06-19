@@ -5,3 +5,12 @@ form {
 .submitButton {
   margin-top: 20px;
 }
+
+.messages{
+  margin-top: 40px;
+}
+
+.message{
+  font-size: 1.2em;
+  margin-top: 15px;
+}
